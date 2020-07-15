@@ -5,6 +5,11 @@ import NavBar from '../../components/NavBar/NavBar';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../services/userService';
+import LeaguePage from '../LeaguePage/LeaguePage';
+
+
+
+
 
 class App extends Component {
   state = {
@@ -37,6 +42,11 @@ class App extends Component {
           <LoginPage
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin}
+          />
+        }/>
+        <Route exact path='/leagues' render={({ history }) =>
+          <LeaguePage 
+            history={history}
           />
         }/>
       </>

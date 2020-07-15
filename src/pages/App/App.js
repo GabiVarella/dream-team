@@ -6,6 +6,8 @@ import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../services/userService';
 import LeaguePage from '../LeaguePage/LeaguePage';
+import BrazilPage from '../BrazilPage/BrazilPage';
+
 
 
 
@@ -46,6 +48,11 @@ class App extends Component {
         }/>
         <Route exact path='/leagues' render={({ history }) =>
           <LeaguePage 
+            history={history}
+          />
+        }/>
+        <Route exact path='/brazil' render={({ history }) =>
+          <BrazilPage 
             history={history}
           />
         }/>

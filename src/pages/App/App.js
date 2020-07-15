@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import LoginPage from '../LoginPage/LoginPage';
@@ -7,6 +7,8 @@ import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../services/userService';
 import LeaguePage from '../LeaguePage/LeaguePage';
 import BrazilPage from '../BrazilPage/BrazilPage';
+import EnglandPage from '../EnglandPage/EnglandPage';
+import SpainPage from '../SpainPage/SpainPage';
 
 
 
@@ -53,6 +55,16 @@ class App extends Component {
         }/>
         <Route exact path='/brazil' render={({ history }) =>
           <BrazilPage 
+            history={history}
+          />
+        }/>
+        <Route exact path='/england' render={({ history }) =>
+          <EnglandPage 
+            history={history}
+          />
+        }/>
+        <Route exact path='/spain' render={({ history }) =>
+          <SpainPage 
             history={history}
           />
         }/>

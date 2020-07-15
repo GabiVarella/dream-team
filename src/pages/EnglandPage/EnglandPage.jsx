@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import { getAllSpain } from '../../services/team-lists';
+import { getAllEngland } from '../../services/team-lists';
 import { Link } from 'react-router-dom';
 
-class SpainPage extends Component {
+class EnglandPage extends Component {
     state = {
-        teams: getAllSpain()
+        teams: getAllEngland()
     }
 
     render() {
         return (
             <>
-                <h4>Spain Teams</h4>
+                <h4>English Teams</h4>
                 {this.state.teams.map((team) =>
                     <div key={team.name}>
                     <img width="150" src={team.img} alt=""/><br></br>
                         <Link
                             to={{
                             pathname: `/details/team/${team.id}`,
-                            team: {team}
+                            team: {team},
+                            img: {team}
                             }}
                         >{team.name}</Link><br></br><br></br><br></br>
                     </div>
@@ -27,4 +28,4 @@ class SpainPage extends Component {
     }
 }
 
-export default SpainPage;
+export default EnglandPage;

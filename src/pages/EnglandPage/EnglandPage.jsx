@@ -10,18 +10,27 @@ class EnglandPage extends Component {
     render() {
         return (
             <>
-                <h4>English Teams</h4>
+               <h4>English Premier</h4>
                 {this.state.teams.map((team) =>
-                    <div key={team.name}>
-                    <img width="150" src={team.img} alt=""/><br></br>
-                        <Link
-                            to={{
-                            pathname: `/details/team/${team.id}`,
-                            team: {team},
-                            img: {team}
-                            }}
-                        >{team.name}</Link><br></br><br></br><br></br>
-                    </div>
+
+
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                            <Link
+                                to={{
+                                pathname: `/details/team/${team.id}`,
+                                team: {team}
+                                }}
+                            >
+                                <img src={team.img} alt="" class="circle" />
+                            </Link>
+                                <span class="title">{team.name}</span>
+                                <p>Something About the Team</p>
+                                <a href="#!" class="secondary-content"><i class="medium material-icons">grade</i></a>
+                            </li>
+                        </ul>
+
+
                 )}
             </>
         )

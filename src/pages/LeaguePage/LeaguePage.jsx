@@ -6,23 +6,28 @@ const LeaguePage = () => {
     return (
 
         <>
-            <h3>Leagues</h3>
-                <Link 
-                    to='/brazil'>
-                        Brazil
-
-                </Link><br></br><br></br>
-                <Link 
-                    to='/england'>
-                        England
-
-                </Link><br></br><br></br>
-                <Link 
-                    to='/spain'>
-                        Spain
-
-                </Link><br></br><br></br>
-            <p>More coming soon!</p>
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Leagues</h4></li>
+            <li class="collection-item">
+                <Link
+                    to='/brazil'
+                    >Brazil
+                </Link>
+            </li>
+            <li class="collection-item">
+                <Link
+                    to='/england'
+                    >England
+                </Link>
+            </li>
+            <li class="collection-item">
+                <Link
+                    to='/spain'
+                    >Spain
+                </Link>
+            </li>
+            
+        </ul>
         </>
 
     )

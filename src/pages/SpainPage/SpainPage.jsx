@@ -10,18 +10,27 @@ class SpainPage extends Component {
     render() {
         return (
             <>
-                <h4>Spain Teams</h4>
+                <h4>La Liga</h4>
                 {this.state.teams.map((team) =>
-                    <div key={team.name}>
-                    <img width="150" src={team.img} alt=""/><br></br>
+
+
+                    <ul class="collection">
+                        <li class="collection-item avatar">
                         <Link
                             to={{
                             pathname: `/details/team/${team.id}`,
                             team: {team}
                             }}
-                        >{team.name}</Link><br></br><br></br><br></br>
-                    </div>
+                        >
+                            <img src={team.img} alt="" class="circle" />
+                        </Link>
+                            <span class="title">{team.name}</span>
+                            <p>Something About the Team</p>
+                            <a href="#!" class="secondary-content"><i class="medium material-icons">grade</i></a>
+                        </li>
+                    </ul>
                 )}
+                
             </>
         )
     }

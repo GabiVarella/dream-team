@@ -11,7 +11,7 @@ const LeaguePage = () => {
             <li class="collection-item">
                 <Link
                     to='/brazil'
-                    >Brazil
+                    >Brazil 🇧🇷
                 </Link>
             </li>
             <li class="collection-item">

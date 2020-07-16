@@ -26,7 +26,7 @@ class BrazilPage extends Component {
                                 <img src={team.img} alt="" class="circle" />
                             </Link>
                                 <span class="title">{team.name}</span>
-                                <p>Something About the Team</p>
+                                <p>Somethign About the Team</p>
                                 <a href="#!" class="secondary-content"><i class="medium material-icons">grade</i></a>
                             </li>
                         </ul>

@@ -17,46 +17,50 @@ class TeamDetailsPage extends Component {
 
     render() {
         return (
-            
             <>
                 {this.state.teamDetails.manager ?
+            
                 <>
-                    <h3>{this.state.teamDetails.team.name}</h3>
-                    <img width="300" src={this.state.teamImg} alt=""/><br></br><br></br>
-                    <div>Venue: {this.state.teamDetails.venue.name}</div><br></br>
-                    <div>Location: {this.state.teamDetails.venue.city_name}</div><br></br>
-                    <div>Capacity: {this.state.teamDetails.venue.capacity}</div><br></br><br></br>
-                    <div>Home Colors:</div>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[0].base}`}} className="color"></button> Base<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[0].sleeve}`}} className="color"></button> Sleeve<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[0].number}`}} className="color"></button> Number<br></br><br></br>
-                    <div>Away Colors:</div>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[1].base}`}} className="color"></button> Base<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[1].sleeve}`}} className="color"></button> Sleeve<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[1].number}`}} className="color"></button> Number<br></br><br></br>
-                    <div>Goalkeeper Colors:</div>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[2].base}`}} className="color"></button> Base<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[2].sleeve}`}} className="color"></button> Sleeve<br></br>
-                        <button style={{backgroundColor:`#${this.state.teamDetails.jerseys[2].number}`}} className="color"></button> Number<br></br><br></br>
+                    <div class="col s12 m7">
+                        <h2 class="header">{this.state.teamDetails.team.name}</h2>
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img height="250vmin" src={this.state.teamImg} alt=""/>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <div>Location: {this.state.teamDetails.venue.city_name}</div><br/>                        
+                                    <div>Venue: {this.state.teamDetails.venue.name}</div><br/>
+                                    <div>Capacity: {this.state.teamDetails.venue.capacity}</div><br/>
+                                    <div>Manager: {this.state.teamDetails.manager.name}</div><br/>                      
+                                </div>
+                                <div class="card-action">
+                                    <Link
+                                        to={{
+                                            pathname: `/details/team/${this.state.teamDetails.team.id}/players`
+                                            //pass players here??
+                                        }}>
+                                        <a href="#">ROSTER</a>
 
-                    <h5>Manager Name: {this.state.teamDetails.manager.name}</h5><br></br><br></br>
-                    <h4>Players:</h4><br></br>
-                    {this.state.teamDetails.players.map((player) =>
-                        <div key={player.name}>
-                            <Link
-                                to={{
-                                    pathname: `/details/player/${player.id}`,
-                                    player: {player}
-                                    }}
-                            >Name: {player.name}</Link><br></br>
-                            <div>Position: {player.type}</div><br></br>
-                            <div>DOB: {player.date_of_birth}</div><br></br><br></br>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
-                        
-                    )}
+                    </div>
                 </>
                 :
-                <div>Loading...</div>
+
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
                 }
             </>
         )

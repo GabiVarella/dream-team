@@ -11,19 +11,19 @@ const LeaguePage = () => {
             <li class="collection-item">
                 <Link
                     to='/brazil'
-                    >Brazil 🇧🇷
+                    ><h5>Brazil <span role="img">🇧🇷</span></h5>
                 </Link>
             </li>
             <li class="collection-item">
                 <Link
                     to='/england'
-                    >England
+                    ><h5>England <span role="img">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></h5>
                 </Link>
             </li>
             <li class="collection-item">
                 <Link
                     to='/spain'
-                    >Spain
+                    ><h5>Spain <span role="img">🇪🇸</span></h5>
                 </Link>
             </li>
             

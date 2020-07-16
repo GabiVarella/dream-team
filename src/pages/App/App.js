@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import userService from '../../services/userService';
@@ -96,6 +97,7 @@ class App extends Component {
             history={history}
           />
         }/>
+        {/* <Footer /> */}
       </>
     );
   }

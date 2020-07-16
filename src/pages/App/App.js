@@ -10,7 +10,7 @@ import BrazilPage from '../BrazilPage/BrazilPage';
 import EnglandPage from '../EnglandPage/EnglandPage';
 import SpainPage from '../SpainPage/SpainPage';
 import TeamDetailsPage from '../TeamDetailsPage/TeamDetailsPage';
-
+import PlayerDetailsPage from '../PlayerDetailsPage/PlayerDetailsPage';
 
 
 
@@ -72,6 +72,13 @@ class App extends Component {
         }/>
          <Route exact path='/details/team/:id' render={({ history, location, match}) =>
           <TeamDetailsPage 
+            history={history}
+            location={location}
+            match={match}
+          />
+        }/>
+        <Route exact path='/details/player/:id' render={({ history, location, match}) =>
+          <PlayerDetailsPage 
             history={history}
             location={location}
             match={match}

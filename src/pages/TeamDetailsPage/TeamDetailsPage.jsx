@@ -36,8 +36,9 @@ class TeamDetailsPage extends Component {
                                 </div>
                                 <div class="card-action">
                                     <Link
+                                        players={this.state.teamDetails.players}
                                         to={{
-                                            pathname: `/details/team/${this.state.teamDetails.team.id}/players`
+                                            pathname: `/details/team/${this.state.teamDetails.team.id}/players`,
                                             //pass players here??
                                         }}>
                                         <a href="#">ROSTER</a>
@@ -47,6 +48,24 @@ class TeamDetailsPage extends Component {
                             </div>
                         </div>
                     </div>
+                    {this.state.teamDetails.players.map((player) =>
+                            <ul class="collection">
+                                <li class="collection-item avatar">
+                                    <img src={this.state.teamImg} alt="" class="circle" />
+                                    <span class="title">
+                                        <Link
+                                            to={{
+                                            pathname: `/details/player/${player.id}`,
+                                            player: {player}
+                                            }}
+                                            >{player.name}</Link></span>
+                                    <p>{player.jersey_number}</p>
+                                    <p>{player.type}</p>
+                                    <p>{player.date_of_birth}</p>
+                                <a href="#!" class="secondary-content"><i class="small material-icons">grade</i></a>
+                                </li>
+                            </ul>
+                    )}
                 </>
                 :
 

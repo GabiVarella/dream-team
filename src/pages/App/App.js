@@ -11,6 +11,8 @@ import EnglandPage from '../EnglandPage/EnglandPage';
 import SpainPage from '../SpainPage/SpainPage';
 import TeamDetailsPage from '../TeamDetailsPage/TeamDetailsPage';
 import PlayerDetailsPage from '../PlayerDetailsPage/PlayerDetailsPage';
+import DreamTeamPage from '../DreamTeamPage/DreamTeamPage';
+import RosterPage from '../RosterPage/RosterPage';
 
 
 
@@ -52,36 +54,46 @@ class App extends Component {
         }/>
         <Route exact path='/leagues' render={({ history }) =>
           <LeaguePage 
-            history={history}
+          history={history}
           />
         }/>
         <Route exact path='/brazil' render={({ history }) =>
           <BrazilPage 
-            history={history}
+          history={history}
           />
         }/>
         <Route exact path='/england' render={({ history }) =>
           <EnglandPage 
-            history={history}
+          history={history}
           />
         }/>
         <Route exact path='/spain' render={({ history }) =>
           <SpainPage 
-            history={history}
+          history={history}
           />
         }/>
          <Route exact path='/details/team/:id' render={({ history, location, match}) =>
           <TeamDetailsPage 
-            history={history}
-            location={location}
-            match={match}
+          history={history}
+          location={location}
+          match={match}
           />
         }/>
         <Route exact path='/details/player/:id' render={({ history, location, match}) =>
           <PlayerDetailsPage 
+          history={history}
+          location={location}
+          match={match}
+          />
+        }/>
+        <Route exact path='/dream_team' render={({ history }) =>
+          <DreamTeamPage 
             history={history}
-            location={location}
-            match={match}
+          />
+        }/>
+        <Route exact path='/roster' render={({ history }) =>
+          <RosterPage 
+            history={history}
           />
         }/>
       </>

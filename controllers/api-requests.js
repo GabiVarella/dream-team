@@ -8,6 +8,8 @@ module.exports = {
     euPlayerInfo,
     addToRoster,
     getDreamTeam,
+    removeFromDreamTeam,
+    
 }
 
 
@@ -46,4 +48,9 @@ function addToRoster(req, res){
 function getDreamTeam(req, res){
     Player.find({"user":req.user._id})
     .then(players => {res.json(players)})
+}
+
+function removeFromDreamTeam(req, res){
+    Player.findByIdAndDelete(req.params.id)
+    .then(player => {res.json(player)})
 }

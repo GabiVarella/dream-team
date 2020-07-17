@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getDreamTeam } from '../../services/api-search';
+import { getDreamTeam, removeFromDreamTeam } from '../../services/api-search';
 
 
 class DreamTeamPage extends Component {
@@ -7,8 +7,14 @@ class DreamTeamPage extends Component {
         players: []
     }
     async componentDidMount() {
-        const players =await getDreamTeam();
+        const players = await getDreamTeam();
         this.setState({players})
+    }
+    handleRemoveFromDreamTeam = async playerId => {
+        await removeFromDreamTeam(playerId);
+        this.setState(state => ({
+            players: state.players.filter(p => p._id !== playerId)
+          }), () => this.props.history.push('/dreamteam'));
     }
 
     render() {

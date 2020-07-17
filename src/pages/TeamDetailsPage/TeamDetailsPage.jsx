@@ -65,6 +65,7 @@ class TeamDetailsPage extends Component {
                                 <a href="#!" class="secondary-content" onClick={() => addToRoster(player.id)}><i class="small material-icons">grade</i></a>
                                 </li>
                             </ul>
+                            
                     )}
                 </>
                 :

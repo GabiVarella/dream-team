@@ -7,17 +7,9 @@ module.exports = {
     americasPlayerInfo,
     euPlayerInfo,
     addToRoster,
+    getDreamTeam,
 }
 
-function addToRoster(req, res){
-    axios.get(`https://api.sportradar.us/soccer-t3/am/en/players/${req.params.id}/profile.json?api_key=${process.env.AMERICAS_API_KEY}`)
-    .then(response => {
-        console.log(response.data);
-        response.data.user = req.user._id;
-        Player.create(response.data)
-        .then(player => {res.json(player)})
-    })
-}
 
 
 
@@ -39,4 +31,19 @@ function americasPlayerInfo(req, res) {
 function euPlayerInfo(req, res) {
     axios.get(`https://api.sportradar.us/soccer-t3/eu/en/players/${req.params.id}/profile.json?api_key=${process.env.EU_API_KEY}`)
     .then(response => {res.json(response.data)})
+}
+
+function addToRoster(req, res){
+    axios.get(`https://api.sportradar.us/soccer-t3/am/en/players/${req.params.id}/profile.json?api_key=${process.env.AMERICAS_API_KEY}`)
+    .then(response => {
+        console.log(response.data);
+        response.data.user = req.user._id;
+        Player.create(response.data)
+        .then(player => {res.json(player)})
+    })
+}
+
+function getDreamTeam(req, res){
+    Player.find({"user":req.user._id})
+    .then(players => {res.json(players)})
 }

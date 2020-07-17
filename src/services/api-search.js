@@ -18,3 +18,10 @@ export function addToRoster(playerId) {
     }, {mode: "cors"})
     .then(res => res.json());
 }
+
+export function getDreamTeam(){
+    return fetch(`/api/americas/dreamteam/`,{
+        headers: {'Authorization': 'Bearer ' + tokenService.getToken()}
+    }, {mode: "cors"})
+    .then(res => res.json());
+}

@@ -1,3 +1,5 @@
+import tokenService from '../services/tokenService'
+
 
 export function getTeamInfo(teamId) {
     return fetch(`/api/americas/team/${teamId}`)
@@ -7,5 +9,12 @@ export function getTeamInfo(teamId) {
 
 export function getPlayerInfo(playerId) {
     return fetch(`/api/americas/player/${playerId}`)
+    .then(res => res.json());
+}
+
+export function addToRoster(playerId) {
+    return fetch(`/api/americas/player/add/${playerId}`,{
+        headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()}
+    }, {mode: "cors"})
     .then(res => res.json());
 }

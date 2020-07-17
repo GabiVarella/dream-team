@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getTeamInfo } from '../../services/api-search';
+import { addToRoster } from '../../services/api-search';
 import { getImg } from '../../services/team-lists';
 import { Link } from 'react-router-dom';
 
@@ -41,7 +42,7 @@ class TeamDetailsPage extends Component {
                                             pathname: `/details/team/${this.state.teamDetails.team.id}/players`,
                                             //pass players here??
                                         }}>
-                                        <a href="#">ROSTER</a>
+                                        <a href="">ROSTER</a>
 
                                     </Link>
                                 </div>
@@ -61,8 +62,7 @@ class TeamDetailsPage extends Component {
                                             >{player.name}</Link></span>
                                     <p>{player.jersey_number}</p>
                                     <p>{player.type}</p>
-                                    <p>{player.date_of_birth}</p>
-                                <a href="#!" class="secondary-content"><i class="small material-icons">grade</i></a>
+                                <a href="#!" class="secondary-content" onClick={() => addToRoster(player.id)}><i class="small material-icons">grade</i></a>
                                 </li>
                             </ul>
                     )}

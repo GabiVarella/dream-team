@@ -31,6 +31,7 @@ class PlayerDetailsPage extends Component {
                                 <th>Goals</th>
                                 <th>Assists</th>
                                 <th>Red Cards</th>
+                                <th>Nationality</th>
                                 <th>DOB</th>
                                 <th>Height</th>
                                 <th>Weight</th>
@@ -48,6 +49,7 @@ class PlayerDetailsPage extends Component {
                                 <td>{this.state.playerDetails.statistics.totals.goals_scored}</td>
                                 <td>{this.state.playerDetails.statistics.totals.assists}</td>
                                 <td>{this.state.playerDetails.statistics.totals.red_cards}</td>
+                                <td>{this.state.playerDetails.player.nationality}</td>
                                 <td>{this.state.playerDetails.player.date_of_birth}</td>
                                 <td>{this.state.playerDetails.player.height} cm</td>
                                 <td>{this.state.playerDetails.player.weight} kg</td>

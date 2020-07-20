@@ -23,7 +23,7 @@ class TeamDetailsPage extends Component {
             
                 <>
                     <div class="col s12 m7">
-                        <h2 class="header">{this.state.teamDetails.team.name}</h2>
+                        <h1 class="header">{this.state.teamDetails.team.name}</h1>
                         <div class="card horizontal">
                             <div class="card-image">
                                 <img height="250vmin" src={this.state.teamImg} alt=""/>
@@ -50,6 +50,7 @@ class TeamDetailsPage extends Component {
                         </div>
                     </div>
                     {this.state.teamDetails.players.map((player) =>
+                    
                             <ul class="collection">
                                 <li class="collection-item avatar">
                                     <img src={this.state.teamImg} alt="" class="circle" />

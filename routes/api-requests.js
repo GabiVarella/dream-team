@@ -9,8 +9,10 @@ router.get('/eu/player/:id', apiCtrl.euPlayerInfo);
 router.get('/americas/team/:id', apiCtrl.americasTeamInfo);
 router.get('/americas/player/:id', apiCtrl.americasPlayerInfo);
 router.get('/americas/player/add/:id', apiCtrl.addToRoster);
+router.get('/americas/roster', apiCtrl.getRoster);
+router.delete('/americas/roster/:id', apiCtrl.removeFromRoster);
 router.get('/americas/dreamteam', apiCtrl.getDreamTeam);
-router.delete('/americas/dreamteam/:id', apiCtrl.removeFromDreamTeam);
+router.post('/americas/dreamteam', apiCtrl.saveDreamTeam);
 
 
 

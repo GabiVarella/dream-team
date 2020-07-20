@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
                     <li><a href="/leagues" className="nav-link">Leagues</a></li>
                     <li><a href="/search" className="nav-link">Search</a></li>
                     <li><a href=" " className="nav-link">Loggedin as <span color= "black">{user.name}</span></a></li>
-                    <li><a href=" " className="nav-link" onClick={handleLogout}>Log Out</a></li>
+                    <li><a href=" " className="nav-link" onClick={handleLogout}>LOG OUT</a></li>
                 </ul>
             </div>
         </nav>

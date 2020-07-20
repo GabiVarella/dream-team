@@ -97,6 +97,12 @@ class App extends Component {
             history={history}
           />
         }/>
+        <Route exact path='/dreamteam' render={({ history }) =>
+          <DreamTeamPage
+            user={this.state.user} 
+            history={history}
+          />
+        }/>
         {/* <Footer /> */}
       </>
     );

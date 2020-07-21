@@ -33,7 +33,7 @@ Trello Board https://trello.com/b/xIGrNkzY/dream-team
 
 ![Team Roster](./public/images/screeshots/team.png)
 
-![Team Emblem](./public/images/screeshots/emblem.png)
+![Team Emblem](./public/images/screeshots/emblem.jpeg)
 
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>

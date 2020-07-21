@@ -87,11 +87,7 @@ class App extends Component {
           match={match}
           />
         }/>
-        <Route exact path='/dream_team' render={({ history }) =>
-          <DreamTeamPage 
-            history={history}
-          />
-        }/>
+        
         <Route exact path='/roster' render={({ history }) =>
           <RosterPage 
             history={history}
@@ -103,6 +99,7 @@ class App extends Component {
             history={history}
           />
         }/>
+        
         {/* <Footer /> */}
       </>
     );

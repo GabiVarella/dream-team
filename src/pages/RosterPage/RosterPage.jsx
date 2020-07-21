@@ -23,8 +23,8 @@ class RosterPage extends Component {
         return (
             <>
                    
-                    <table class="table table-striped ">
-                        <thead>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
                             <tr>
                                 <th>Name</th>
                                 <th>Nationality</th>
@@ -53,5 +53,4 @@ class RosterPage extends Component {
         )
     }
 }
-
 export default RosterPage;

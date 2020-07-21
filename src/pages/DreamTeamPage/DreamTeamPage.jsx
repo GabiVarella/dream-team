@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getDreamTeam, saveDreamTeam, getRoster } from '../../services/api-search';
 
 
+
 class DreamTeamPage extends Component {
     state = {
         formData: {
@@ -19,13 +20,11 @@ class DreamTeamPage extends Component {
             
         },
         players: [],
-        //tryin got get starting lineup for dream team 
-        dreamTeam: [],
+        
     }
     async componentDidMount() {
         const players = await getRoster();
         this.setState({players})
-        
         //tryin got get starting lineup for dream team 
         const dreamTeam = await getDreamTeam();
         this.setState({dreamTeam})
@@ -42,6 +41,8 @@ class DreamTeamPage extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.handleSaveDreamTeam(this.state.formData);
+
+        this.props.history.push('/')
     };
 
     handleChange = e => {
@@ -57,7 +58,7 @@ class DreamTeamPage extends Component {
         const playerSelect = [<option key="select2" value="Please Select">Please Select</option>];
         
         this.state.players.forEach((player) => {
-            if (player.player.type === 'goalkeeper') {goalkeeperSelect.push(<option key={player.player.name} value={player.player.name}>{player.player.name}</option>)}
+        if (player.player.type === 'goalkeeper') {goalkeeperSelect.push(<option key={player.player.name} value={player.player.name}>{player.player.name}</option>)}
             if (player.player.type !== 'goalkeeper') {playerSelect.push(<option key={player.player.name} value={player.player.name}>{player.player.name}</option>)}
         })
         
@@ -111,11 +112,6 @@ class DreamTeamPage extends Component {
                 </select>
                 <button type="submit">Save Changes</button>
                 </form>
-
-
-                {/* tryin got get starting lineup for dream team  */}
-                <p>{this.state.dreamTeam.fieldPlayer1}</p> 
-                {/* ============= */}
                 
                       
             </>

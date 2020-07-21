@@ -40,7 +40,6 @@ class TeamDetailsPage extends Component {
                                         players={this.state.teamDetails.players}
                                         to={{
                                             pathname: `/details/team/${this.state.teamDetails.team.id}/players`,
-                                            //pass players here??
                                         }}>
                                         <a href="">ROSTER</a>
 

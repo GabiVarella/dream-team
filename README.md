@@ -17,7 +17,7 @@ Create your own unstoppable dream team. Choose players from many international l
 Check out teams rosters and and player stats.
 Choose your unique starting lineup and crush the adversary.
 
-Try it out:  https://my-fitness-journey.herokuapp.com/
+Try it out:  https://gabriel-varella-dream-team.herokuapp.com/
 
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>

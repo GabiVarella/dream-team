@@ -19,14 +19,17 @@ class DreamTeamPage extends Component {
             
         },
         players: [],
+        //tryin got get starting lineup for dream team 
         dreamTeam: [],
     }
     async componentDidMount() {
         const players = await getRoster();
         this.setState({players})
+        
+        //tryin got get starting lineup for dream team 
         const dreamTeam = await getDreamTeam();
         this.setState({dreamTeam})
-
+        //============
         if (dreamTeam[0]) {this.setState({ formData: dreamTeam[0] });}
         
     }
@@ -109,7 +112,10 @@ class DreamTeamPage extends Component {
                 <button type="submit">Save Changes</button>
                 </form>
 
-                <p>{this.state.dreamTeam.goalkeeper}</p> 
+
+                {/* tryin got get starting lineup for dream team  */}
+                <p>{this.state.dreamTeam.fieldPlayer1}</p> 
+                {/* ============= */}
                 
                       
             </>

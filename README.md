@@ -27,13 +27,13 @@ Try it out:  https://gabriel-varella-dream-team.herokuapp.com/
 
 Trello Board https://trello.com/b/xIGrNkzY/dream-team
 
-![Leagues](./public/images/screeshots/leagues.png)
+![Leagues](./public/images/screenshots/leagues.png)
 
-![Teams](./public/images/screeshots/teams.png)
+![Teams](./public/images/screenshots/teams.png)
 
-![Team Roster](./public/images/screeshots/team.png)
+![Team Roster](./public/images/screenshots/team.png)
 
-![Team Emblem](./public/images/screeshots/emblem.jpeg)
+![Team Emblem](./public/images/screenshots/emblem.jpeg)
 
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>
 ==>==>==>==>==>==>==>==>==>==>==>==>==>==>==>
